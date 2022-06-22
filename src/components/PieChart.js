@@ -31,7 +31,7 @@ const data = {
 const PieChart = () => {
     return (
         <>
-            <div className='flex items-center justify-center py-4 px-4'>
+            <div className='flex items-center justify-center py-6 px-4'>
                 <Doughnut data={data} />
             </div>
         </>

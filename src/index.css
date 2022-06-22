@@ -11,3 +11,21 @@ html, body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .deliveryCard{
+        @apply w-full h-full max-w-[230px] px-4 rounded-xl border-l-4 border flex-grow
+    }
+
+    .orderCard {
+        @apply h-full w-full bg-white flex items-center justify-between rounded-xl p-4
+    }
+
+    .sidebarMain{
+        @apply flex items-center space-x-4 md:space-x-10 p-4 hover:bg-blue-400 rounded-xl cursor-pointer
+    }
+
+    .sidebarText {
+        @apply md:inline-block text-lg text-gray-500 font-semibold
+    }
+}

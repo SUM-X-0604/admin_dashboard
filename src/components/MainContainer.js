@@ -4,20 +4,20 @@ import Header from './Header'
 import DeliverySection from './DeliverySection'
 import Overview from './Overview';
 
-const MainContainer = () => {
+const MainContainer = ({ sidebarHandler }) => {
     return (
         <>
             <div className='w-full h-full top-0 flex flex-col items-center '>
                 <div className='w-full h-full flex flex-col items-center'>
-                    <Header />
+                    <Header sidebarHandler={sidebarHandler} />
                     <OrderSection />
                 </div>
 
-                <div className='w-full h-full flex flex-col lg:flex-row items-center justify-between px-10 sm:px-4 gap-3 sm:gap-6'>
-                    <div className=' w-full flex items-center justify-center flex-col'>
+                <div className='w-full flex flex-col lg:flex-row items-center justify-between px-10 gap-3 sm:gap-6'>
+                    <div className='w-full h-full flex items-center justify-center'>
                         <DeliverySection />
                     </div>
-                    <div className='w-full pt-12 md:pt-2 flex items-start justify-center'>
+                    <div className='w-full h-full pt-12 md:pt-2 flex items-start justify-center'>
                         <Overview />
                     </div>
 

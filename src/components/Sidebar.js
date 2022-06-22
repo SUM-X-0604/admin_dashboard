@@ -3,80 +3,91 @@ import {
     BsFillImageFill,
     BsFillTagFill,
     BsFillCartFill,
-    BsMenuUp
+    BsMenuUp,
+    BsTag,
 } from 'react-icons/bs'
 import {
-    AiFillHome,
     AiOutlineUser,
     AiOutlineBarChart,
     AiFillSetting,
-    AiOutlineLogout
+    AiOutlineLogout,
+    AiOutlineHome,
 } from 'react-icons/ai';
 import { FaAddressBook } from 'react-icons/fa'
-// import { BiRightArrowCircle, BiLeftArrowCircle } from 'react-icons/bi'
-import SidebarRow from './SidebarRow';
 
-
-
-const Sidebar = () => {
-
-    // const [showTitle, setShowTitle] = useState(false);
-
-    // const TitleHandler = () => {
-
-    // }
+const Sidebar = ({ menu }) => {
 
     return (
-        <div className='hidden sm:inline-block p-2 mt-2 max-w-[150px] md:min-w-[250px] bg-white rounded-2xl'>
-            <SidebarRow
-                Icon={BsFillImageFill}
-                title="Laundary"
-            />
-            <SidebarRow
-                Icon={AiFillHome}
-                title="Dashboard"
-            />
-            <SidebarRow
-                Icon={BsFillTagFill}
-                title="Pos"
-            />
-            <SidebarRow
-                Icon={BsFillCartFill}
-                title="Orders"
-            />
-            <SidebarRow
-                Icon={BsMenuUp}
-                title="Order Status"
-            />
-            <SidebarRow
-                Icon={FaAddressBook}
-                title="Expenses"
-            />
-            <SidebarRow
-                Icon={AiOutlineUser}
-                title="Customers"
-            />
-            <SidebarRow
-                Icon={BsFillTagFill}
-                title="Services"
-            />
-            <SidebarRow
-                Icon={AiOutlineBarChart}
-                title="Report"
-            />
-            <SidebarRow
-                Icon={AiFillSetting}
-                title="Tool"
-            />
-            <SidebarRow
-                Icon={AiOutlineLogout}
-                title="Logout"
-            />
-            {/* <div className='flex items-center justify-center py-4'>
-                <BiLeftArrowCircle className="h-8 w-8 cursor-pointer"
-                    onClick={TitleHandler} />
-            </div> */}
-        </div>
+        <div className={`hidden lg:inline-block p-2 mt-2 max-w-[150px] ${menu ? 'md:w-[100px] justify-center' : 'md:min-w-[230px]'} bg-white rounded-2xl`} >
+
+            {/* Laundary */}
+            <div className='pb-12 sidebarMain' >
+                <BsFillImageFill className="h-6 w-6 md:h-8 md:w-8  cursor-pointer" />
+                {/* <p className='hidden md:inline-block text-xl text-gray-500 font-semibold uppercase'>Laundary</p> */}
+                <p className={menu ? 'hidden' : ' md:inline-block text-xl text-gray-500 font-semibold uppercase'}>Laundary</p>
+            </div >
+
+            {/* Dashboard */}
+            <div className='flex items-center space-x-4 md:space-x-10 p-4 hover:bg-blue-400 hover:text-white rounded-xl cursor-pointer' >
+                <AiOutlineHome className="h-6 w-6 md:h-8 md:w-8 cursor-pointer " />
+                <p className={menu ? 'hidden' : 'sidebarText'}>Dashboard</p>
+            </ div>
+
+            {/* Tag */}
+            <div className='sidebarMain' >
+                <BsTag className="h-6 w-6 md:h-8 md:w-8  cursor-pointer text-red-500" />
+                <p className={menu ? 'hidden' : 'sidebarText'}>Pos</p>
+            </div >
+
+            {/* order */}
+            <div className='sidebarMain' >
+                <BsFillCartFill className="h-6 w-6 md:h-8 md:w-8 cursor-pointer text-green-400" />
+                <p className={menu ? 'hidden' : 'sidebarText'}>Orders</p>
+            </div >
+
+            {/* order status screen */}
+            <div className='sidebarMain' >
+                <BsMenuUp className="h-6 w-6 md:h-8 md:w-8  cursor-pointer text-yellow-400" />
+                <p className={menu ? 'hidden' : 'sidebarText'}>Order Status</p>
+            </ div>
+
+            {/* expense */}
+            <div className='sidebarMain' >
+                <AiOutlineBarChart className="h-6 w-6 md:h-8 md:w-8 cursor-pointer text-red-400" />
+                <p className={menu ? 'hidden' : 'sidebarText'}>Expenses</p>
+            </div>
+
+            {/* cursomers */}
+            <div className='sidebarMain' >
+                <AiOutlineUser className="h-6 w-6 md:h-8 md:w-8 cursor-pointer text-violet-600" />
+                <p className={menu ? 'hidden' : 'sidebarText'}>Customers</p>
+            </div>
+
+            {/* services */}
+            <div className='sidebarMain' >
+                <BsFillTagFill className="h-6 w-6 md:h-8 md:w-8 cursor-pointer text-blue-700" />
+                <p className={menu ? 'hidden' : 'sidebarText'}>Services</p>
+            </div >
+
+            {/* reports */}
+            <div className='sidebarMain' >
+                <FaAddressBook className="h-6 w-6 md:h-8 md:w-8  cursor-pointer text-yellow-300" />
+                <p className={menu ? 'hidden' : 'sidebarText'}>Reports</p>
+            </ div>
+
+            {/* tools */}
+            <div className='sidebarMain' >
+                <AiFillSetting className="h-6 w-6 md:h-8 md:w-8 cursor-pointer text-yellow-600" />
+                <p className={menu ? 'hidden' : 'sidebarText'}>Tools</p>
+            </ div>
+
+            {/* logout */}
+            <div className='sidebarMain' >
+                <AiOutlineLogout className="h-6 w-6 md:h-8 md:w-8 cursor-pointer text-gray-600" />
+                <p className={menu ? 'hidden' : 'sidebarText'}>Logout</p>
+            </ div>
+
+        </div >
     );
 }
 

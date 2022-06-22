@@ -6,10 +6,10 @@ import { MdDoneOutline } from 'react-icons/md'
 
 const OrderSection = () => {
     return (
-        <div className='px-10 py-8 w-full flex flex-col lg:flex-row items-center justify-center gap-4'>
+        <div className='px-10 py-8 w-full h-full flex flex-col lg:flex-row items-center justify-center gap-4'>
 
             {/* first item */}
-            <div className='h-full w-full bg-white flex items-center justify-between rounded-xl p-4'>
+            <div className='orderCard'>
                 <div className='flex flex-col gap-2'>
                     <p className='text-base text-gray-600 uppercase'>Pending Order</p>
                     <p className='font-semibold text-lg'>203</p>
@@ -20,7 +20,7 @@ const OrderSection = () => {
             </div>
 
             {/* second item */}
-            <div className='h-full w-full bg-white flex items-center justify-between rounded-xl p-4'>
+            <div className='orderCard'>
                 <div className='flex flex-col gap-2'>
                     <p className='text-base text-gray-600 uppercase'>Processing Order</p>
                     <p className='font-semibold text-lg '>99</p>
@@ -31,7 +31,7 @@ const OrderSection = () => {
             </div>
 
             {/* third item */}
-            <div className='h-full w-full bg-white flex items-center justify-between rounded-xl p-4'>
+            <div className='orderCard'>
                 <div className='flex flex-col gap-2'>
                     <p className='text-base text-gray-600 uppercase'>Ready to deliver</p>
                     <p className='font-semibold text-lg'>263</p>
@@ -42,7 +42,7 @@ const OrderSection = () => {
             </div>
 
             {/* fourth item */}
-            <div className='h-full w-full bg-white flex items-center justify-between rounded-xl p-4'>
+            <div className='orderCard'>
                 <div className='flex flex-col gap-2'>
                     <p className='text-base text-gray-600 uppercase'>delivered orders</p>
                     <p className='font-semibold text-lg'>346</p>
