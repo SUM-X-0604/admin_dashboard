@@ -26,6 +26,6 @@ html, body {
     }
 
     .sidebarText {
-        @apply md:inline-block text-lg text-gray-500 font-semibold
+        @apply md:inline-block text-base text-gray-500 font-semibold
     }
 }

@@ -6,7 +6,7 @@ import { MdDoneOutline } from 'react-icons/md'
 
 const OrderSection = () => {
     return (
-        <div className='px-10 py-10 w-full h-full flex flex-col lg:flex-row items-center justify-center gap-4'>
+        <div className='px-10 py-8 w-full h-full flex flex-col lg:flex-row items-center justify-center gap-4'>
 
             {/* first item */}
             <div className='orderCard'>
